@@ -1,0 +1,6 @@
+framework module Pods_SchoolProjectTests {
+  umbrella header "Pods-SchoolProjectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
