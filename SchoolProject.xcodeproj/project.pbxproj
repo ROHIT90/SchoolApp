@@ -15,6 +15,11 @@
 		8FEEF7321EB6E2EC00321208 /* SchoolProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF7311EB6E2EC00321208 /* SchoolProjectTests.swift */; };
 		8FEEF73D1EB6E2EC00321208 /* SchoolProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF73C1EB6E2EC00321208 /* SchoolProjectUITests.swift */; };
 		8FEEF74B1EB6E70A00321208 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEF74A1EB6E70A00321208 /* GoogleService-Info.plist */; };
+		8FEEF7501EB8C35C00321208 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF74F1EB8C35C00321208 /* ShadowView.swift */; };
+		8FEEF7551EB8C4A400321208 /* Constatnts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF7541EB8C4A400321208 /* Constatnts.swift */; };
+		8FEEF7591EB8C77900321208 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF7581EB8C77900321208 /* RoundButton.swift */; };
+		8FEEF75B1EB8C91600321208 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF75A1EB8C91600321208 /* CustomTextField.swift */; };
+		8FEEF75D1EB8CA9C00321208 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF75C1EB8CA9C00321208 /* CustomButton.swift */; };
 		B045AE4CAE71A2384514223D /* Pods_SchoolProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A770B21620DD63CD3E077FE /* Pods_SchoolProjectUITests.framework */; };
 		D3D1004C3ADD1C3FD7098740 /* Pods_SchoolProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0BA94F0754B4E5A8033D8D /* Pods_SchoolProjectTests.framework */; };
 		DD14DB71C7E2EFD37D84A090 /* Pods_SchoolProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A593006B3612613BFF765524 /* Pods_SchoolProject.framework */; };
@@ -55,6 +60,11 @@
 		8FEEF73C1EB6E2EC00321208 /* SchoolProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolProjectUITests.swift; sourceTree = "<group>"; };
 		8FEEF73E1EB6E2EC00321208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FEEF74A1EB6E70A00321208 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8FEEF74F1EB8C35C00321208 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		8FEEF7541EB8C4A400321208 /* Constatnts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constatnts.swift; sourceTree = "<group>"; };
+		8FEEF7581EB8C77900321208 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		8FEEF75A1EB8C91600321208 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		8FEEF75C1EB8CA9C00321208 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		903B3F4B06C9A5B0B06F9A16 /* Pods-SchoolProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectUITests/Pods-SchoolProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A593006B3612613BFF765524 /* Pods_SchoolProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C162F775263BEA510135779B /* Pods-SchoolProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectTests/Pods-SchoolProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +126,7 @@
 		8FEEF71B1EB6E2EC00321208 /* SchoolProject */ = {
 			isa = PBXGroup;
 			children = (
+				8FEEF7531EB8C48B00321208 /* Util */,
 				8FEEF74E1EB6EA0100321208 /* Controller */,
 				8FEEF74D1EB6E9F800321208 /* View */,
 				8FEEF74C1EB6E9EE00321208 /* Model */,
@@ -157,6 +168,10 @@
 		8FEEF74D1EB6E9F800321208 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8FEEF74F1EB8C35C00321208 /* ShadowView.swift */,
+				8FEEF7581EB8C77900321208 /* RoundButton.swift */,
+				8FEEF75A1EB8C91600321208 /* CustomTextField.swift */,
+				8FEEF75C1EB8CA9C00321208 /* CustomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -167,6 +182,14 @@
 				8FEEF71E1EB6E2EC00321208 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		8FEEF7531EB8C48B00321208 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8FEEF7541EB8C4A400321208 /* Constatnts.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		B241D2A5D59BB096083BEA0B /* Pods */ = {
@@ -477,6 +500,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FEEF7551EB8C4A400321208 /* Constatnts.swift in Sources */,
+				8FEEF7591EB8C77900321208 /* RoundButton.swift in Sources */,
+				8FEEF75B1EB8C91600321208 /* CustomTextField.swift in Sources */,
+				8FEEF7501EB8C35C00321208 /* ShadowView.swift in Sources */,
+				8FEEF75D1EB8CA9C00321208 /* CustomButton.swift in Sources */,
 				8FEEF71F1EB6E2EC00321208 /* SignInVC.swift in Sources */,
 				8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */,
 			);
