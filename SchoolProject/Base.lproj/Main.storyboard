@@ -42,8 +42,17 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKD-Hz-bWM" customClass="ShadowView" customModule="SchoolProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShoolLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gxV-EI-DNB">
+                                        <rect key="frame" x="67" y="8" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="gxV-EI-DNB" firstAttribute="top" secondItem="RKD-Hz-bWM" secondAttribute="top" constant="8" id="2T6-gG-KGf"/>
+                                    <constraint firstAttribute="trailing" secondItem="gxV-EI-DNB" secondAttribute="trailing" constant="68" id="ERP-Y1-SqC"/>
+                                    <constraint firstAttribute="bottom" secondItem="gxV-EI-DNB" secondAttribute="bottom" constant="14" id="UK2-qj-7Vv"/>
+                                    <constraint firstItem="gxV-EI-DNB" firstAttribute="leading" secondItem="RKD-Hz-bWM" secondAttribute="leading" constant="67" id="WWf-90-xlu"/>
                                     <constraint firstAttribute="height" constant="150" id="sK4-k1-Wam"/>
                                 </constraints>
                             </view>
@@ -116,4 +125,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="101.19940029985008"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ShoolLogo" width="394" height="206"/>
+    </resources>
 </document>
