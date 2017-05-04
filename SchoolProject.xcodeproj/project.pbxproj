@@ -65,6 +65,7 @@
 		8FEEF7581EB8C77900321208 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		8FEEF75A1EB8C91600321208 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8FEEF75C1EB8CA9C00321208 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8FEEF7601EBABF5800321208 /* SchoolProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchoolProject.entitlements; sourceTree = "<group>"; };
 		903B3F4B06C9A5B0B06F9A16 /* Pods-SchoolProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectUITests/Pods-SchoolProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A593006B3612613BFF765524 /* Pods_SchoolProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C162F775263BEA510135779B /* Pods-SchoolProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectTests/Pods-SchoolProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		8FEEF71B1EB6E2EC00321208 /* SchoolProject */ = {
 			isa = PBXGroup;
 			children = (
+				8FEEF7601EBABF5800321208 /* SchoolProject.entitlements */,
 				8FEEF7531EB8C48B00321208 /* Util */,
 				8FEEF74E1EB6EA0100321208 /* Controller */,
 				8FEEF74D1EB6E9F800321208 /* View */,
@@ -294,6 +296,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Y3HQTHU3DE;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					8FEEF72C1EB6E2EC00321208 = {
 						CreatedOnToolsVersion = 8.2.1;
