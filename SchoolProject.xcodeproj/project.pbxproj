@@ -22,6 +22,7 @@
 		8FEEF75D1EB8CA9C00321208 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF75C1EB8CA9C00321208 /* CustomButton.swift */; };
 		8FEEF7621EBC243C00321208 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF7611EBC243C00321208 /* AppState.swift */; };
 		8FEEF7641EBC287100321208 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF7631EBC287100321208 /* CreateAccountViewController.swift */; };
+		8FEEF7661EBC3C4C00321208 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF7651EBC3C4C00321208 /* ResetPasswordViewController.swift */; };
 		B045AE4CAE71A2384514223D /* Pods_SchoolProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A770B21620DD63CD3E077FE /* Pods_SchoolProjectUITests.framework */; };
 		D3D1004C3ADD1C3FD7098740 /* Pods_SchoolProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0BA94F0754B4E5A8033D8D /* Pods_SchoolProjectTests.framework */; };
 		DD14DB71C7E2EFD37D84A090 /* Pods_SchoolProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A593006B3612613BFF765524 /* Pods_SchoolProject.framework */; };
@@ -70,6 +71,7 @@
 		8FEEF7601EBABF5800321208 /* SchoolProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchoolProject.entitlements; sourceTree = "<group>"; };
 		8FEEF7611EBC243C00321208 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8FEEF7631EBC287100321208 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		8FEEF7651EBC3C4C00321208 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		903B3F4B06C9A5B0B06F9A16 /* Pods-SchoolProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectUITests/Pods-SchoolProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A593006B3612613BFF765524 /* Pods_SchoolProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C162F775263BEA510135779B /* Pods-SchoolProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectTests/Pods-SchoolProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				8FEEF71E1EB6E2EC00321208 /* SignInVC.swift */,
 				8FEEF7631EBC287100321208 /* CreateAccountViewController.swift */,
+				8FEEF7651EBC3C4C00321208 /* ResetPasswordViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				8FEEF7501EB8C35C00321208 /* ShadowView.swift in Sources */,
 				8FEEF75D1EB8CA9C00321208 /* CustomButton.swift in Sources */,
 				8FEEF7641EBC287100321208 /* CreateAccountViewController.swift in Sources */,
+				8FEEF7661EBC3C4C00321208 /* ResetPasswordViewController.swift in Sources */,
 				8FEEF71F1EB6E2EC00321208 /* SignInVC.swift in Sources */,
 				8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */,
 			);
