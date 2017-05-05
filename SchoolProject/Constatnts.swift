@@ -10,3 +10,14 @@ import UIKit
 
 let SHADOW_GREY: CGFloat = 120.0/255.0
 
+struct Constants {
+    
+    struct NotificationKeys {
+        static let SignedIn = "onSignInCompleted"
+    }
+    
+    struct Segues {
+        static let SignInToFp = "SignInToFP"
+        static let FpToSignIn = "FPToSignIn"
+    }
+}
