@@ -90,3 +90,10 @@ class SignInVC: UIViewController {
     }
 }
 
+extension SignInVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+

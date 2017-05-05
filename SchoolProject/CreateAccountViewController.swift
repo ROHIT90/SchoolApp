@@ -54,3 +54,10 @@ class CreateAccountViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
+
+extension CreateAccountViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
