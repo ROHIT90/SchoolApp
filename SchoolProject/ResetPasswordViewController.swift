@@ -1,11 +1,3 @@
-//
-//  ResetPasswordViewController.swift
-//  SchoolProject
-//
-//  Created by Fnu, Rohit on 5/5/17.
-//  Copyright © 2017 Fnu, Rohit. All rights reserved.
-//
-
 import UIKit
 import Firebase
 

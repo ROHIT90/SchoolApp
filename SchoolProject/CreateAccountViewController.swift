@@ -1,11 +1,3 @@
-//
-//  CreateAccountViewController.swift
-//  SchoolProject
-//
-//  Created by Fnu, Rohit on 5/4/17.
-//  Copyright © 2017 Fnu, Rohit. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
