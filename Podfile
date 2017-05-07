@@ -11,15 +11,21 @@ target 'SchoolProject' do
   pod 'FBSDKLoginKit'
 
   # Pods for SchoolProject
+  def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+  end
 
   target 'SchoolProjectTests' do
     inherit! :search_paths
     # Pods for testing
+    testing_pods
   end
 
   target 'SchoolProjectUITests' do
     inherit! :search_paths
     # Pods for testing
+    testing_pods
   end
 
 end

@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Nimble.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SchoolProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,10 +49,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Quick.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0921CC2F4398BE9A4F1CEACB30684B56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B65E62BD19D4C063661BBCC6142857B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1F785BE82D712438F9A51719B7FE4C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8651B01D38DD60C671E56A49959C45B</key>
+		<key>7C9296718B5ADCBE6428DE3CB983E329</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFE1E14F8AEAAF1077D01D25C5F6BC6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
