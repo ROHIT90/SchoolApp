@@ -4,7 +4,8 @@ import Firebase
 class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
-
+    let fireBaseLogin = FireBaseLogin()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +21,10 @@ class CreateAccountViewController: UIViewController {
                 return
             }
             self.setDisplayName(user!)
+            let alert = UIAlertController(title: "", message: "Account has been created", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
     
@@ -31,15 +36,8 @@ class CreateAccountViewController: UIViewController {
                 print(error.localizedDescription)
                 return
             }
-            self.signedIn(FIRAuth.auth()?.currentUser)
+            self.fireBaseLogin.signedIn(FIRAuth.auth()?.currentUser)
         }
-    }
-    
-    func signedIn(_ user: FIRUser?) {
-        AppState.sharedInstance.displayName = user?.displayName ?? user?.email
-        AppState.sharedInstance.signedIn = true
-        let notificationName = Notification.Name(rawValue: Constants.NotificationKeys.SignedIn)
-        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: nil)
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {

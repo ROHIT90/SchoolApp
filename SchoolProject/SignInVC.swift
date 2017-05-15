@@ -8,12 +8,14 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
+    let fireBaseLogin = FireBaseLogin()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func facebookButtonTapped(_ sender: Any) {
+        
         let faceBookLoginManager = FBSDKLoginManager()
         faceBookLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
@@ -23,7 +25,7 @@ class SignInVC: UIViewController {
             } else {
                 print("FB: successfully authenticated with faceBook")
                 let credentials = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.fireBaseAuth(credentials)
+                self.fireBaseLogin.fireBaseAuth(credentials)
             }
         }
     }
@@ -34,6 +36,7 @@ class SignInVC: UIViewController {
         
         let actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: rect) as UIActivityIndicatorView
         actInd.center = self.view.center
+        actInd.backgroundColor = UIColor.red
         actInd.hidesWhenStopped = true
         actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
         view.addSubview(actInd)
@@ -52,42 +55,16 @@ class SignInVC: UIViewController {
                 
                 return
             }
-            self.signedIn(user!)
+            self.fireBaseLogin.signedIn(user!)
+            self.performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
             self.view.isUserInteractionEnabled = true
             
             actInd.stopAnimating()
         }
     }
     
-    func setDisplayName(_ user: FIRUser?) {
-        let changeRequest = user?.profileChangeRequest()
-        changeRequest?.displayName = user?.email!.components(separatedBy: "@")[0]
-        changeRequest?.commitChanges(){ (error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            self.signedIn(FIRAuth.auth()?.currentUser)
-        }
-    }
+
     
-    func signedIn(_ user: FIRUser?) {
-        AppState.sharedInstance.displayName = user?.displayName ?? user?.email
-        AppState.sharedInstance.signedIn = true
-        let notificationName = Notification.Name(rawValue: Constants.NotificationKeys.SignedIn)
-        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: nil)
-        performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
-    }
-    
-    func fireBaseAuth(_ credentials: FIRAuthCredential) {
-        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
-            if error != nil {
-                print("FB: Unable to aunthenticate with firebase \(error)")
-            } else {
-                print("FB: Authenticated with firebase")
-            }
-        })
-    }
 }
 
 extension SignInVC: UITextFieldDelegate {
@@ -96,4 +73,5 @@ extension SignInVC: UITextFieldDelegate {
         return true
     }
 }
+
 

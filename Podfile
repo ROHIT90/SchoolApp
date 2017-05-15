@@ -19,6 +19,11 @@ target 'SchoolProject' do
   target 'SchoolProjectTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'FBSDKLoginKit'
     testing_pods
   end
 
