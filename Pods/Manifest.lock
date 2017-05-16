@@ -52,6 +52,7 @@ PODS:
   - NVActivityIndicatorView (3.6.1)
   - Quick (1.1.0)
   - SCLAlertView (0.7.0)
+  - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`)
   - Quick
   - SCLAlertView
+  - SwiftKeychainWrapper
 
 EXTERNAL SOURCES:
   NVActivityIndicatorView:
@@ -90,7 +92,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: '09a1085f3caf939fe18cdb33684a7635291004e6'
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: d02d613b66bdf1d3fb4abd36e7f8c64bc1661c58
+PODFILE CHECKSUM: 5e6a4de4cc343165760c2f8107320fe8e717251a
 
 COCOAPODS: 1.2.0

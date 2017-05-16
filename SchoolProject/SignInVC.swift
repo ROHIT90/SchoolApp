@@ -5,6 +5,7 @@ import Firebase
 import FirebaseInstanceID
 import NVActivityIndicatorView
 import SCLAlertView
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -14,6 +15,13 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            self.performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
+        }
     }
     
     @IBAction func facebookButtonTapped(_ sender: Any) {
@@ -25,6 +33,7 @@ class SignInVC: UIViewController {
             } else {
                 let credentials = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.fireBaseLogin.fireBaseAuth(credentials)
+                self.performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
             }
         }
     }
@@ -50,6 +59,9 @@ class SignInVC: UIViewController {
             self.fireBaseLogin.signedIn(user!)
             self.performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
             self.view.isUserInteractionEnabled = true
+            if let user = user {
+                KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
+            }
             activityIndicator.stopAnimating()
         }
     }

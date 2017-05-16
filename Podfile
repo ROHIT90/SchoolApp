@@ -10,6 +10,7 @@ target 'SchoolProject' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SCLAlertView'
+  pod 'SwiftKeychainWrapper'
   pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git'
   # Pods for SchoolProject
   def testing_pods
