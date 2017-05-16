@@ -49,7 +49,9 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
   - Nimble (6.0.1)
+  - NVActivityIndicatorView (3.6.1)
   - Quick (1.1.0)
+  - SCLAlertView (0.7.0)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -58,7 +60,18 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - Nimble
+  - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`)
   - Quick
+  - SCLAlertView
+
+EXTERNAL SOURCES:
+  NVActivityIndicatorView:
+    :git: https://github.com/ninjaprox/NVActivityIndicatorView.git
+
+CHECKOUT OPTIONS:
+  NVActivityIndicatorView:
+    :commit: 754250ef427d5a07f331fcb7501713f4ba0db5be
+    :git: https://github.com/ninjaprox/NVActivityIndicatorView.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -74,8 +87,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  NVActivityIndicatorView: '09a1085f3caf939fe18cdb33684a7635291004e6'
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
 
-PODFILE CHECKSUM: 899f90a44a07caa81f885ef3610489d2dd925d5a
+PODFILE CHECKSUM: d02d613b66bdf1d3fb4abd36e7f8c64bc1661c58
 
 COCOAPODS: 1.2.0

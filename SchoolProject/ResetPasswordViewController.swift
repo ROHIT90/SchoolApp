@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import SCLAlertView
 
 class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
@@ -12,13 +13,9 @@ class ResetPasswordViewController: UIViewController {
         if let email = emailTextField.text {
             FIRAuth.auth()?.sendPasswordReset(withEmail: email, completion: { (error) in
                 if error == nil {
-                    let alert = UIAlertController(title: "Reset", message: "Please check your email to reset password", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    SCLAlertView().showSuccess("Password Reset", subTitle: "An email has been sent to you with password reset instructions")
                 } else {
-                    let alert = UIAlertController(title: nil, message: "Please enter valid email id", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    SCLAlertView().showError("", subTitle: "Please enter valid email id")
                 }
             })
         }
