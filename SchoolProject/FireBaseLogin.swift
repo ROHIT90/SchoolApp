@@ -1,6 +1,7 @@
 import Foundation
 import Firebase
 import FirebaseInstanceID
+import SwiftKeychainWrapper
 
 class FireBaseLogin {
     
@@ -10,6 +11,9 @@ class FireBaseLogin {
                 print("FB: Unable to aunthenticate with firebase \(error)")
             } else {
                 print("FB: Authenticated with firebase")
+                if let user = user {
+                    KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
+                }
             }
         })
     }

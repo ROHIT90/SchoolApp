@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import SCLAlertView
 
 class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
@@ -8,23 +9,24 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
     @IBAction func signUpTapped(_ sender: Any) {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
             if let error = error {
-                let alert = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                SCLAlertView().showError("", subTitle: error.localizedDescription)
                 return
             }
             self.setDisplayName(user!)
-            let alert = UIAlertController(title: "", message: "Account has been created", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false
+            )
+            let successAlert = SCLAlertView(appearance: appearance)
+            successAlert.addButton("Done") {
+                self.dismiss(animated: false, completion: nil)
+            }
+            successAlert.showSuccess("Congrats!", subTitle: "Your account has been created")
         }
     }
     

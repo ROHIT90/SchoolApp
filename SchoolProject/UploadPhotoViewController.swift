@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -21,15 +22,13 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     
     @IBAction func logOutButtonTapped(_ sender: Any) {
         try! FIRAuth.auth()!.signOut()
-        if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "LogInView") 
-            self.present(vc, animated: false, completion: nil)
-        }
+        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        self.dismiss(animated: false, completion: nil)
     }
 }
 
 extension UploadPhotoViewController: UITableViewDelegate {
-
+    
 }
 
 extension UploadPhotoViewController: UITableViewDataSource {
