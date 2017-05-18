@@ -39,12 +39,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8k-Q9-JXq" customClass="RoundButton" customModule="SchoolProject" customModuleProvider="target">
-                                <rect key="frame" x="127" y="200" width="120" height="120"/>
+                                <rect key="frame" x="147" y="199" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.2627450980392157" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Ajn-au-ySl"/>
+                                    <constraint firstAttribute="width" constant="80" id="Ajn-au-ySl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
                                 <state key="normal" title="FaceBook LogIn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -52,11 +52,14 @@
                                     <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rYE-ZC-64I"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sK4-qI-iLW">
-                                <rect key="frame" x="20" y="350" width="335" height="132"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sK4-qI-iLW">
+                                <rect key="frame" x="20" y="300" width="335" height="112"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1990.rohitnarwal@gmail.com" borderStyle="roundedRect" placeholder="User name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-Aw-jYP" customClass="CustomTextField" customModule="SchoolProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Saq-4g-TI9"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -65,7 +68,10 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3v-Tu-ha4" customClass="CustomTextField" customModule="SchoolProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="40" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="35r-V7-BbX"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -74,8 +80,11 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dab-Pd-TXA" customClass="CustomButton" customModule="SchoolProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="335" height="32"/>
+                                        <rect key="frame" x="0.0" y="80" width="335" height="32"/>
                                         <color key="backgroundColor" red="0.086274509803921567" green="0.48627450980392156" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Tvz-qP-ujJ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,28 +101,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzt-5n-LU1">
-                                <rect key="frame" x="166" y="497" width="24" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0C-cl-KyQ" customClass="CustomButton" customModule="SchoolProject" customModuleProvider="target">
-                                <rect key="frame" x="20" y="525" width="335" height="32"/>
-                                <color key="backgroundColor" red="0.086274509799999996" green="0.48627450979999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Create Account">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="O6T-Z6-9ea" kind="popoverPresentation" popoverAnchorView="P0C-cl-KyQ" id="27K-DT-lIa">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjU-QF-HAB" customClass="CustomButton" customModule="SchoolProject" customModuleProvider="target">
-                                <rect key="frame" x="20" y="579" width="335" height="32"/>
+                                <rect key="frame" x="20" y="428" width="335" height="32"/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.48627450979999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="d8a-li-fJe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,29 +117,42 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0C-cl-KyQ" customClass="CustomButton" customModule="SchoolProject" customModuleProvider="target">
+                                <rect key="frame" x="20" y="480" width="335" height="32"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.48627450979999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="u27-Ey-Uhx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="O6T-Z6-9ea" kind="popoverPresentation" popoverAnchorView="P0C-cl-KyQ" id="27K-DT-lIa">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="P0C-cl-KyQ" firstAttribute="top" secondItem="sK4-qI-iLW" secondAttribute="bottom" constant="68" id="0BN-al-gnA"/>
                             <constraint firstItem="vjU-QF-HAB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0s0-C4-bUk"/>
                             <constraint firstItem="BPF-Ak-uhc" firstAttribute="top" secondItem="RKD-Hz-bWM" secondAttribute="bottom" constant="20" id="0tG-I5-2DC"/>
                             <constraint firstItem="RKD-Hz-bWM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3WV-HK-elu"/>
-                            <constraint firstItem="pzt-5n-LU1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="166" id="4oA-Gx-L7p"/>
                             <constraint firstItem="P0C-cl-KyQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5v6-1R-Vxx"/>
-                            <constraint firstItem="q8k-Q9-JXq" firstAttribute="top" secondItem="RKD-Hz-bWM" secondAttribute="bottom" constant="50" id="6js-3C-AkF"/>
+                            <constraint firstItem="q8k-Q9-JXq" firstAttribute="top" secondItem="RKD-Hz-bWM" secondAttribute="bottom" constant="49" id="6js-3C-AkF"/>
                             <constraint firstAttribute="trailing" secondItem="RKD-Hz-bWM" secondAttribute="trailing" id="ARD-G7-sQx"/>
-                            <constraint firstItem="sK4-qI-iLW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="350" id="Cg7-2u-xYp"/>
-                            <constraint firstItem="vjU-QF-HAB" firstAttribute="top" secondItem="P0C-cl-KyQ" secondAttribute="bottom" constant="22" id="EWP-2Z-iBH"/>
+                            <constraint firstItem="sK4-qI-iLW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="300" id="Cg7-2u-xYp"/>
+                            <constraint firstItem="vjU-QF-HAB" firstAttribute="top" secondItem="P0C-cl-KyQ" secondAttribute="bottom" constant="-84" id="EWP-2Z-iBH"/>
                             <constraint firstAttribute="trailing" secondItem="vjU-QF-HAB" secondAttribute="trailing" constant="20" id="EcB-0h-Uu3"/>
-                            <constraint firstItem="pzt-5n-LU1" firstAttribute="top" secondItem="sK4-qI-iLW" secondAttribute="bottom" constant="14.5" id="H8k-yw-qSa"/>
                             <constraint firstItem="sK4-qI-iLW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="OTx-Ak-bPM"/>
-                            <constraint firstItem="q8k-Q9-JXq" firstAttribute="top" secondItem="BPF-Ak-uhc" secondAttribute="bottom" constant="9" id="Xm6-3b-8ws"/>
+                            <constraint firstItem="q8k-Q9-JXq" firstAttribute="top" secondItem="BPF-Ak-uhc" secondAttribute="bottom" constant="8" id="Xm6-3b-8ws"/>
                             <constraint firstItem="BPF-Ak-uhc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="cW1-Ie-NPK"/>
-                            <constraint firstAttribute="trailing" secondItem="pzt-5n-LU1" secondAttribute="trailing" constant="185" id="daV-fr-mAH"/>
                             <constraint firstAttribute="trailing" secondItem="sK4-qI-iLW" secondAttribute="trailing" constant="20" id="eGJ-Zk-vll"/>
                             <constraint firstAttribute="trailing" secondItem="BPF-Ak-uhc" secondAttribute="trailing" constant="20" id="j5a-if-6y4"/>
-                            <constraint firstItem="sK4-qI-iLW" firstAttribute="top" secondItem="q8k-Q9-JXq" secondAttribute="bottom" constant="30" id="jum-da-exW"/>
+                            <constraint firstItem="sK4-qI-iLW" firstAttribute="top" secondItem="q8k-Q9-JXq" secondAttribute="bottom" constant="21" id="jum-da-exW"/>
                             <constraint firstAttribute="trailing" secondItem="P0C-cl-KyQ" secondAttribute="trailing" constant="20" id="keF-Eg-SBD"/>
-                            <constraint firstItem="P0C-cl-KyQ" firstAttribute="top" secondItem="pzt-5n-LU1" secondAttribute="bottom" constant="7" id="oi2-3E-Klc"/>
                             <constraint firstItem="RKD-Hz-bWM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="u3z-rj-Woo"/>
                             <constraint firstItem="q8k-Q9-JXq" firstAttribute="centerX" secondItem="sK4-qI-iLW" secondAttribute="centerX" id="wnx-7t-b0u"/>
                         </constraints>
@@ -319,19 +325,18 @@
                                                                         <constraint firstAttribute="width" constant="50" id="rmI-XT-UHV"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAq-If-QGs">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rohit Narwal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAq-If-QGs">
                                                                     <rect key="frame" x="50" y="0.0" width="243" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="243" id="D0s-2P-fr6"/>
                                                                         <constraint firstAttribute="height" constant="50" id="OjU-OT-kSl"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                                    <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ck-qb-WmR">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_deselected_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2Ck-qb-WmR">
                                                                     <rect key="frame" x="293" y="0.0" width="50" height="50"/>
-                                                                    <color key="backgroundColor" red="0.086274509799999996" green="0.48627450979999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="ExV-l2-5XF"/>
                                                                         <constraint firstAttribute="height" constant="50" id="dwH-7H-qch"/>
@@ -616,5 +621,6 @@
     </scenes>
     <resources>
         <image name="ShoolLogo" width="394" height="206"/>
+        <image name="heart_deselected_icon" width="22" height="20"/>
     </resources>
 </document>
