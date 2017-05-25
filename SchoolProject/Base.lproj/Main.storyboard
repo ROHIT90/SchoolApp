@@ -274,7 +274,7 @@
                         <viewControllerLayoutGuide type="top" id="n3x-gv-05N"/>
                         <viewControllerLayoutGuide type="bottom" id="GH5-RY-6DI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2as-yB-eBd" customClass="UploadPhotoView" customModule="SchoolProject" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="2as-yB-eBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -472,10 +472,10 @@
                             <constraint firstAttribute="trailing" secondItem="jUg-jI-a8e" secondAttribute="trailing" id="ikd-80-kEU"/>
                             <constraint firstItem="jUg-jI-a8e" firstAttribute="leading" secondItem="2as-yB-eBd" secondAttribute="leading" id="m64-d4-5mw"/>
                         </constraints>
-                        <connections>
-                            <outlet property="photoTableView" destination="Z5W-OV-LBi" id="hP4-zv-cEM"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Z5W-OV-LBi" id="JrL-Hq-T86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PY4-VX-zP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
