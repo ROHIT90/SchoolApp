@@ -8,6 +8,9 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataService.ds.REF_POSTS.observe(.value, with: { (shot) in
+            print("**********************\(shot.value)")
+        })
         
     }
     @IBAction func photoButtonTapped(_ sender: Any) {
