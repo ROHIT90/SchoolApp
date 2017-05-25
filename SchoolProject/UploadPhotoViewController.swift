@@ -4,15 +4,27 @@ import SwiftKeychainWrapper
 
 class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     let photoView = UploadPhotoView()
+    var posts = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataService.ds.REF_POSTS.observe(.value, with: { (shot) in
-            print("**********************\(shot.value)")
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshot {
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            self.tableView.reloadData()
         })
         
     }
+    
     @IBAction func photoButtonTapped(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
@@ -40,14 +52,17 @@ extension UploadPhotoViewController: UITableViewDelegate {
 extension UploadPhotoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PhotoTableViewCell {
+            cell.configureCell(post: post)
+            return cell
+        } else { return PhotoTableViewCell() }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PhotoTableViewCell
-                
-        return cell
     }
     
 }

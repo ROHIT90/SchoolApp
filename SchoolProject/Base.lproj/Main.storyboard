@@ -274,7 +274,7 @@
                         <viewControllerLayoutGuide type="top" id="n3x-gv-05N"/>
                         <viewControllerLayoutGuide type="bottom" id="GH5-RY-6DI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2as-yB-eBd" customClass="UploadPhotoView" customModule="SchoolProject" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="2as-yB-eBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -372,7 +372,7 @@
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-ag-qq7">
-                                                            <rect key="frame" x="251" y="361" width="40" height="21"/>
+                                                            <rect key="frame" x="251.5" y="361" width="40" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.5" id="0Xw-cb-Qrc"/>
                                                                 <constraint firstAttribute="width" constant="39.5" id="Jui-17-fWa"/>
@@ -382,9 +382,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVW-LA-8RQ">
-                                                            <rect key="frame" x="308" y="361" width="11" height="21"/>
+                                                            <rect key="frame" x="308" y="361" width="43" height="21"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="10.5" id="0aT-6J-N2d"/>
+                                                                <constraint firstAttribute="width" constant="43" id="0aT-6J-N2d"/>
                                                                 <constraint firstAttribute="height" constant="20.5" id="3ds-9k-95D"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -403,7 +403,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="NmK-ag-qq7" secondAttribute="bottom" constant="10" id="Lhn-Pl-kql"/>
                                                         <constraint firstItem="doA-1e-Cbl" firstAttribute="leading" secondItem="oH8-lp-FCK" secondAttribute="leading" constant="8" id="bLB-zT-rAT"/>
                                                         <constraint firstItem="NmK-ag-qq7" firstAttribute="top" secondItem="doA-1e-Cbl" secondAttribute="bottom" constant="8" id="g7X-MM-ACD"/>
-                                                        <constraint firstAttribute="trailing" secondItem="gVW-LA-8RQ" secondAttribute="trailing" constant="40" id="mYi-3L-xx5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gVW-LA-8RQ" secondAttribute="trailing" constant="8" id="mYi-3L-xx5"/>
                                                         <constraint firstAttribute="trailing" secondItem="doA-1e-Cbl" secondAttribute="trailing" constant="8" id="s4b-c6-P2n"/>
                                                         <constraint firstAttribute="trailing" secondItem="2wt-Ws-vTJ" secondAttribute="trailing" constant="8" id="sD4-3y-oNJ"/>
                                                         <constraint firstItem="gVW-LA-8RQ" firstAttribute="top" secondItem="doA-1e-Cbl" secondAttribute="bottom" constant="8" id="vls-5Y-YVZ"/>
@@ -472,10 +472,10 @@
                             <constraint firstAttribute="trailing" secondItem="jUg-jI-a8e" secondAttribute="trailing" id="ikd-80-kEU"/>
                             <constraint firstItem="jUg-jI-a8e" firstAttribute="leading" secondItem="2as-yB-eBd" secondAttribute="leading" id="m64-d4-5mw"/>
                         </constraints>
-                        <connections>
-                            <outlet property="photoTableView" destination="Z5W-OV-LBi" id="hP4-zv-cEM"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Z5W-OV-LBi" id="JrL-Hq-T86"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PY4-VX-zP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
