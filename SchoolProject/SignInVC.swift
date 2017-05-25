@@ -60,6 +60,9 @@ class SignInVC: UIViewController {
             self.performSegue(withIdentifier: Constants.Segues.SignInToFp, sender: nil)
             self.view.isUserInteractionEnabled = true
             if let user = user {
+            
+                DataService.ds.createUser(uid: user.uid, userData: ["provider": user.providerID])
+
                 KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
             }
             activityIndicator.stopAnimating()

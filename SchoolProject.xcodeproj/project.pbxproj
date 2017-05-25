@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6ABEB61ECE781F001C92B9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6ABEB51ECE781F001C92B9 /* DataServices.swift */; };
 		8F7475DD1ECA1B49003152D2 /* FireBaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7475DC1ECA1B49003152D2 /* FireBaseLogin.swift */; };
 		8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF71C1EB6E2EC00321208 /* AppDelegate.swift */; };
 		8FEEF71F1EB6E2EC00321208 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF71E1EB6E2EC00321208 /* SignInVC.swift */; };
@@ -53,6 +54,7 @@
 		0A770B21620DD63CD3E077FE /* Pods_SchoolProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0BA94F0754B4E5A8033D8D /* Pods_SchoolProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D50052F40F1BE891EDA107 /* Pods-SchoolProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectUITests/Pods-SchoolProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F6ABEB51ECE781F001C92B9 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		8F7475DC1ECA1B49003152D2 /* FireBaseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseLogin.swift; sourceTree = "<group>"; };
 		8FEEF7191EB6E2EC00321208 /* SchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEEF71C1EB6E2EC00321208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F6ABEB41ECE7801001C92B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8F6ABEB51ECE781F001C92B9 /* DataServices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		8F7475D91ECA1240003152D2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		8FEEF71B1EB6E2EC00321208 /* SchoolProject */ = {
 			isa = PBXGroup;
 			children = (
+				8F6ABEB41ECE7801001C92B9 /* Services */,
 				8F7475D91ECA1240003152D2 /* Network */,
 				8FEEF7601EBABF5800321208 /* SchoolProject.entitlements */,
 				8FEEF7531EB8C48B00321208 /* Util */,
@@ -536,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6ABEB61ECE781F001C92B9 /* DataServices.swift in Sources */,
 				8FEEF7551EB8C4A400321208 /* Constatnts.swift in Sources */,
 				8FEEF7591EB8C77900321208 /* RoundButton.swift in Sources */,
 				8FEEF76C1EBD2D0E00321208 /* UploadPhotoView.swift in Sources */,

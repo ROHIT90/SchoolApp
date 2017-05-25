@@ -12,6 +12,7 @@ class FireBaseLogin {
             } else {
                 print("FB: Authenticated with firebase")
                 if let user = user {
+                    DataService.ds.createUser(uid: user.uid, userData: ["provider": credentials.provider])
                     KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
                 }
             }
