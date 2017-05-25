@@ -13,7 +13,6 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
-                    print("******************\(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
@@ -25,6 +24,7 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         })
         
     }
+    
     @IBAction func photoButtonTapped(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
@@ -57,10 +57,12 @@ extension UploadPhotoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-        print("**************\(post.caption)")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PhotoTableViewCell
-                
-        return cell
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PhotoTableViewCell {
+            cell.configureCell(post: post)
+            return cell
+        } else { return PhotoTableViewCell() }
+        
     }
     
 }
