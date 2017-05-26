@@ -372,7 +372,7 @@
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-ag-qq7">
-                                                            <rect key="frame" x="251.5" y="361" width="40" height="21"/>
+                                                            <rect key="frame" x="251" y="361" width="40" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.5" id="0Xw-cb-Qrc"/>
                                                                 <constraint firstAttribute="width" constant="39.5" id="Jui-17-fWa"/>
@@ -436,26 +436,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-Tf-Lha" customClass="ShadowView" customModule="SchoolProject" customModuleProvider="target">
                                 <rect key="frame" x="4" y="60" width="367" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLq-mp-99e">
-                                        <rect key="frame" x="8" y="16" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="photoButtonTapped:" destination="yNx-HC-Udo" eventType="touchUpInside" id="6yu-BZ-DYL"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-E9-c0U">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-E9-c0U">
                                         <rect key="frame" x="62" y="16" width="221" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="221" id="IKM-W5-pS9"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_photo_btn" translatesAutoresizingMaskIntoConstraints="NO" id="PFV-00-6Vk">
+                                        <rect key="frame" x="4" y="14" width="50" height="34"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="aHf-yP-j6L"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XyG-HN-oTN" appends="YES" id="3xd-xa-lLK"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="PFV-00-6Vk" firstAttribute="top" secondItem="4lZ-Tf-Lha" secondAttribute="top" constant="14" id="2Ai-OX-dCd"/>
+                                    <constraint firstAttribute="bottom" secondItem="PFV-00-6Vk" secondAttribute="bottom" constant="14" id="53y-li-Yss"/>
+                                    <constraint firstItem="J6G-E9-c0U" firstAttribute="centerY" secondItem="PFV-00-6Vk" secondAttribute="centerY" id="FjN-bk-PgW"/>
+                                    <constraint firstItem="J6G-E9-c0U" firstAttribute="leading" secondItem="PFV-00-6Vk" secondAttribute="trailing" constant="8" id="JWq-gH-WIG"/>
+                                    <constraint firstItem="PFV-00-6Vk" firstAttribute="leading" secondItem="4lZ-Tf-Lha" secondAttribute="leading" constant="4" id="hQ6-vI-h0u"/>
                                     <constraint firstAttribute="height" constant="62" id="qBy-cv-OAA"/>
+                                    <constraint firstAttribute="trailing" secondItem="J6G-E9-c0U" secondAttribute="trailing" constant="84" id="vut-6G-OcJ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -474,10 +483,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImageView" destination="PFV-00-6Vk" id="iok-ZR-GYa"/>
                         <outlet property="tableView" destination="Z5W-OV-LBi" id="JrL-Hq-T86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PY4-VX-zP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XyG-HN-oTN">
+                    <connections>
+                        <action selector="photoGestureTapped:" destination="yNx-HC-Udo" id="1fo-nu-Kx4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1896.8" y="-753.37331334332839"/>
         </scene>
@@ -621,6 +636,7 @@
     </scenes>
     <resources>
         <image name="ShoolLogo" width="394" height="206"/>
+        <image name="add_photo_btn" width="20" height="19"/>
         <image name="heart_deselected_icon" width="22" height="20"/>
     </resources>
 </document>
