@@ -42,7 +42,8 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    @IBAction func logOutButtonTapped(_ sender: Any) {
+    
+    @IBAction func logOutGestureTapped(_ sender: Any) {
         try! FIRAuth.auth()!.signOut()
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         self.dismiss(animated: false, completion: nil)

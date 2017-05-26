@@ -281,22 +281,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUg-jI-a8e">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suW-ST-xcL">
-                                        <rect key="frame" x="307" y="22" width="60" height="30"/>
-                                        <state key="normal" title="Sign Out">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-ML-fHK">
+                                        <rect key="frame" x="20" y="12" width="50" height="50"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3Td-xX-PXl"/>
+                                            <constraint firstAttribute="width" constant="50" id="vnP-fy-RlE"/>
+                                        </constraints>
                                         <connections>
-                                            <action selector="logOutButtonTapped:" destination="yNx-HC-Udo" eventType="touchUpInside" id="gBo-w5-oAg"/>
+                                            <outletCollection property="gestureRecognizers" destination="76Q-wN-OQl" appends="YES" id="fKi-Q5-x7x"/>
                                         </connections>
-                                    </button>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="suW-ST-xcL" firstAttribute="top" secondItem="jUg-jI-a8e" secondAttribute="top" constant="22" id="Q18-hb-QR8"/>
-                                    <constraint firstAttribute="trailing" secondItem="suW-ST-xcL" secondAttribute="trailing" constant="8" id="bKz-Bg-q2d"/>
+                                    <constraint firstAttribute="bottom" secondItem="CD9-ML-fHK" secondAttribute="bottom" constant="-2" id="3hW-Bz-Nvo"/>
+                                    <constraint firstItem="CD9-ML-fHK" firstAttribute="leading" secondItem="jUg-jI-a8e" secondAttribute="leading" constant="20" id="e4e-6L-J9e"/>
+                                    <constraint firstItem="CD9-ML-fHK" firstAttribute="top" secondItem="jUg-jI-a8e" secondAttribute="top" constant="12" id="i2h-Xp-78P"/>
                                     <constraint firstAttribute="height" constant="60" id="nz3-Vg-YPH"/>
-                                    <constraint firstAttribute="bottom" secondItem="suW-ST-xcL" secondAttribute="bottom" constant="8" id="yoq-Tw-Fgf"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5W-OV-LBi">
@@ -493,8 +495,13 @@
                         <action selector="photoGestureTapped:" destination="yNx-HC-Udo" id="1fo-nu-Kx4"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="76Q-wN-OQl">
+                    <connections>
+                        <action selector="logOutGestureTapped:" destination="yNx-HC-Udo" id="EI6-qo-pMV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1896.8" y="-753.37331334332839"/>
+            <point key="canvasLocation" x="1906.4000000000001" y="-732.68365817091455"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="eGX-gh-V9o">
@@ -638,5 +645,6 @@
         <image name="ShoolLogo" width="394" height="206"/>
         <image name="add_photo_btn" width="20" height="19"/>
         <image name="heart_deselected_icon" width="22" height="20"/>
+        <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>
