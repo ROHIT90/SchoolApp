@@ -39,8 +39,8 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     @IBAction func photoGestureTapped(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
- 
-
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImageView.image = image
@@ -50,6 +50,8 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func postGestureTapped(_ sender: Any) {
+        self.view.endEditing(true)
+
         guard let caption = captionField.text, caption != ""  else {
             return
         }
@@ -75,6 +77,7 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
                 }
             }
         }
+        self.view.endEditing(true)
     }
     
     func postToFireBase(imageUrl: String) {
@@ -124,5 +127,12 @@ extension UploadPhotoViewController: UITableViewDataSource {
                 return cell
             }
         } else { return PhotoTableViewCell() }
+    }
+}
+
+extension UploadPhotoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

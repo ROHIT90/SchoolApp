@@ -461,6 +461,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="yNx-HC-Udo" id="sgg-1c-Sfh"/>
+                                        </connections>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stories_selected_icon" translatesAutoresizingMaskIntoConstraints="NO" id="1e0-m4-oTp">
                                         <rect key="frame" x="325" y="14" width="34" height="34"/>
