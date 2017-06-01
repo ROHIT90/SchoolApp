@@ -308,12 +308,12 @@
                                     <constraint firstAttribute="trailing" secondItem="WFc-WF-oPP" secondAttribute="trailing" constant="111" id="vKU-ie-WwL"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5W-OV-LBi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="220" sectionHeaderHeight="34" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5W-OV-LBi">
                                 <rect key="frame" x="0.0" y="125" width="375" height="540"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="400" id="pSQ-S8-D76" customClass="PhotoTableViewCell" customModule="SchoolProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="400"/>
+                                        <rect key="frame" x="0.0" y="34" width="375" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pSQ-S8-D76" id="d3a-XE-7RS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
@@ -462,17 +462,32 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stories_selected_icon" translatesAutoresizingMaskIntoConstraints="NO" id="1e0-m4-oTp">
+                                        <rect key="frame" x="325" y="14" width="34" height="34"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="agJ-Sk-2J6"/>
+                                            <constraint firstAttribute="height" constant="34" id="tzp-wP-Pg1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tT6-aP-f7q" appends="YES" id="vMl-HQ-dds"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="PFV-00-6Vk" firstAttribute="top" secondItem="4lZ-Tf-Lha" secondAttribute="top" constant="14" id="7QZ-8R-Vtb"/>
                                     <constraint firstAttribute="trailing" secondItem="J6G-E9-c0U" secondAttribute="trailing" constant="58" id="Gvo-hH-DQB"/>
+                                    <constraint firstAttribute="trailing" secondItem="1e0-m4-oTp" secondAttribute="trailing" constant="8" id="MKc-LJ-Xo2"/>
                                     <constraint firstItem="J6G-E9-c0U" firstAttribute="top" secondItem="4lZ-Tf-Lha" secondAttribute="top" constant="16" id="S2q-Hg-rXb"/>
                                     <constraint firstItem="PFV-00-6Vk" firstAttribute="leading" secondItem="4lZ-Tf-Lha" secondAttribute="leading" constant="4" id="UOf-ao-n76"/>
                                     <constraint firstItem="PFV-00-6Vk" firstAttribute="centerY" secondItem="J6G-E9-c0U" secondAttribute="centerY" id="fg8-71-Fo8"/>
+                                    <constraint firstItem="1e0-m4-oTp" firstAttribute="top" secondItem="4lZ-Tf-Lha" secondAttribute="top" constant="14" id="k1Q-q0-yVq"/>
+                                    <constraint firstAttribute="bottom" secondItem="1e0-m4-oTp" secondAttribute="bottom" constant="14" id="mFv-cV-yLT"/>
                                     <constraint firstItem="J6G-E9-c0U" firstAttribute="leading" secondItem="PFV-00-6Vk" secondAttribute="trailing" constant="20" id="wMn-2i-LM3"/>
                                     <constraint firstItem="J6G-E9-c0U" firstAttribute="centerX" secondItem="4lZ-Tf-Lha" secondAttribute="centerX" id="xGI-pI-Wzv"/>
                                     <constraint firstItem="PFV-00-6Vk" firstAttribute="centerY" secondItem="4lZ-Tf-Lha" secondAttribute="centerY" id="zJd-AG-YF8"/>
+                                    <constraint firstItem="1e0-m4-oTp" firstAttribute="leading" secondItem="J6G-E9-c0U" secondAttribute="trailing" constant="16" id="zch-DG-sSD"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -493,6 +508,7 @@
                     </view>
                     <connections>
                         <outlet property="addImageView" destination="PFV-00-6Vk" id="iok-ZR-GYa"/>
+                        <outlet property="captionField" destination="J6G-E9-c0U" id="tmn-Xi-kdp"/>
                         <outlet property="tableView" destination="Z5W-OV-LBi" id="JrL-Hq-T86"/>
                     </connections>
                 </viewController>
@@ -505,6 +521,11 @@
                 <tapGestureRecognizer id="76Q-wN-OQl">
                     <connections>
                         <action selector="logOutGestureTapped:" destination="yNx-HC-Udo" id="EI6-qo-pMV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tT6-aP-f7q">
+                    <connections>
+                        <action selector="postGestureTapped:" destination="yNx-HC-Udo" id="0Be-E9-m4M"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -653,5 +674,6 @@
         <image name="add_photo_btn" width="20" height="19"/>
         <image name="heart_deselected_icon" width="22" height="20"/>
         <image name="sign-out" width="92" height="65"/>
+        <image name="stories_selected_icon" width="16" height="20"/>
     </resources>
 </document>
