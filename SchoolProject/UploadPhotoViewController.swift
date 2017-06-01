@@ -10,7 +10,6 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
@@ -29,7 +28,6 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
             }
             self.tableView.reloadData()
         })
-        
     }
     
     @IBAction func photoGestureTapped(_ sender: Any) {
