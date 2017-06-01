@@ -22,6 +22,7 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            self.posts = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
@@ -68,9 +69,28 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
                 } else {
                     print("UPLOAD: succesful to upload pic")
                     let downloadURL = metData?.downloadURL()?.absoluteString
+                    if let url =  downloadURL {
+                        self.postToFireBase(imageUrl: url)
+                    }
                 }
             }
         }
+    }
+    
+    func postToFireBase(imageUrl: String) {
+        let post: Dictionary<String, AnyObject> = [
+            "caption":captionField.text as AnyObject,
+            "imageUrl":imageUrl as AnyObject,
+            "like":0 as AnyObject
+        ]
+        
+        let fireBasePost = DataService.ds.REF_POSTS.childByAutoId()
+        fireBasePost.setValue(post)
+        
+        captionField.text = ""
+        addImageView.image = UIImage(named:"add_photo_btn")
+        imageSelected = false
+        tableView.reloadData()
     }
     
     @IBAction func logOutGestureTapped(_ sender: Any) {
