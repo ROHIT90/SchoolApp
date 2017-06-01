@@ -6,9 +6,11 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImageView: UIImageView!
+    
     let photoView = UploadPhotoView()
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +64,15 @@ extension UploadPhotoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
-
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PhotoTableViewCell {
-            cell.configureCell(post: post)
-            return cell
+            if let image = UploadPhotoViewController.imageCache.object(forKey: post.imageUrl as NSString) {
+                cell.configureCell(post: post, image: image)
+                return cell
+            } else {
+                cell.configureCell(post: post)
+                return cell
+            }
         } else { return PhotoTableViewCell() }
     }
 }
