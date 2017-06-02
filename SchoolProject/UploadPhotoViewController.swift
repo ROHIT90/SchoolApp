@@ -1,6 +1,7 @@
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
+import NVActivityIndicatorView
 
 class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -50,13 +51,21 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     }
     
     @IBAction func postGestureTapped(_ sender: Any) {
+        let rect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let activityIndicator = NVActivityIndicatorView(frame: rect, type: .lineScale, color: UIColor(red:244/255, green:67/255, blue:54/255, alpha:1), padding: CGFloat(0))
+        activityIndicator.center = self.view.center
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        
         self.view.endEditing(true)
 
         guard let caption = captionField.text, caption != ""  else {
+            activityIndicator.stopAnimating()
             return
         }
         
         guard let image = addImageView.image, imageSelected == true  else {
+            activityIndicator.stopAnimating()
             return
         }
         
@@ -68,8 +77,10 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
             DataService.ds.REF_STORAGE_IMAGES.child(imageUID).put(imageData, metadata: metData) {(metData, error) in
                 if error != nil {
                     print("UPLOAD: Unable to upload pic")
+                    activityIndicator.stopAnimating()
                 } else {
                     print("UPLOAD: succesful to upload pic")
+                    activityIndicator.stopAnimating()
                     let downloadURL = metData?.downloadURL()?.absoluteString
                     if let url =  downloadURL {
                         self.postToFireBase(imageUrl: url)
@@ -77,7 +88,6 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
                 }
             }
         }
-        self.view.endEditing(true)
     }
     
     func postToFireBase(imageUrl: String) {
@@ -121,11 +131,10 @@ extension UploadPhotoViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PhotoTableViewCell {
             if let image = UploadPhotoViewController.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, image: image)
-                return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
             }
+            return cell
         } else { return PhotoTableViewCell() }
     }
 }
