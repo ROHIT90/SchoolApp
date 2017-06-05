@@ -30,6 +30,7 @@ class PhotoTableViewCell: UITableViewCell {
 
         self.commentTextView.text = post.caption
         self.numberOfLikesLabel.text = String(post.likes)
+        self.profileNameLabel.text = post.userName
         
         if image != nil {
             self.uploadImage.image = image

@@ -53,7 +53,6 @@ class SignInVC: UIViewController {
                 SCLAlertView().showError("", subTitle: error.localizedDescription)
                 activityIndicator.stopAnimating()
                 self.view.isUserInteractionEnabled = true
-                
                 return
             }
             self.fireBaseLogin.signedIn(user!)
@@ -62,11 +61,30 @@ class SignInVC: UIViewController {
             if let user = user {
             
                 DataService.ds.createUser(uid: user.uid, userData: ["provider": user.providerID])
-
                 KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
             }
+            self.setDisplayName(user!)
+
+            print("this is username\(self.emailTextField.text)")
+
             activityIndicator.stopAnimating()
         }
+    }
+    
+    func setDisplayName(_ user: FIRUser?) {
+        let changeRequest = user?.profileChangeRequest()
+        changeRequest?.displayName = user?.email!.components(separatedBy: "@")[0]
+        changeRequest?.commitChanges(){ (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            self.userName(FIRAuth.auth()?.currentUser)
+        }
+    }
+    
+    func userName(_ user:FIRUser?)  {
+        AppState.sharedInstance.displayName = user?.displayName ?? user?.email
     }
 }
 

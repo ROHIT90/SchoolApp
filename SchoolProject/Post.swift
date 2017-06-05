@@ -4,6 +4,7 @@ import Firebase
 class Post {
     private var _caption: String!
     private var _imageUrl: String!
+    private var _userName:String!
     private var _likes: Int!
     private var _postKey: String!
     private var _postRef: FIRDatabaseReference!
@@ -24,10 +25,15 @@ class Post {
         return _postKey
     }
     
-    init(caption:String, imageUrl:String, likes:Int) {
+    var userName:String {
+        return _userName
+    }
+    
+    init(caption:String, imageUrl:String, likes:Int, userName:String) {
         self._caption = caption
         self._imageUrl = imageUrl
         self._likes = likes
+        self._userName = userName
     }
     
     init(postKey:String, postData: Dictionary<String, AnyObject>) {
@@ -44,8 +50,11 @@ class Post {
         if let likes = postData["like"] as? Int {
             self._likes = likes
         }
+        
+        if let userName = postData["userName"] as? String {
+            self._userName = userName
+        }
         _postRef = DataService.ds.REF_POSTS.child(_postKey)
-
     }
     
     func adjustLike(addLike: Bool) {

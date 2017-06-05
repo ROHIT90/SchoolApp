@@ -22,6 +22,10 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         
+        if let displayName = AppState.sharedInstance.displayName {
+            KeychainWrapper.standard.set(displayName, forKey: KEY_USERNAME)
+        }
+        
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             self.posts = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -94,7 +98,8 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         let post: Dictionary<String, AnyObject> = [
             "caption":captionField.text as AnyObject,
             "imageUrl":imageUrl as AnyObject,
-            "like":0 as AnyObject
+            "like":0 as AnyObject,
+            "userName": KeychainWrapper.standard.string(forKey: KEY_USERNAME) as AnyObject
         ]
         
         let fireBasePost = DataService.ds.REF_POSTS.childByAutoId()
@@ -109,6 +114,7 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     @IBAction func logOutGestureTapped(_ sender: Any) {
         try! FIRAuth.auth()!.signOut()
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        KeychainWrapper.standard.removeObject(forKey: KEY_USERNAME)
         self.dismiss(animated: false, completion: nil)
     }
 }
