@@ -18,11 +18,15 @@ class DataService {
     
     //STORAGE REFRENCE
     private var _REF_STORAGE_IMAGES =  STORAGE_BASE.child("post-pics")
+    private var _REF_STORAGE_PROFILEIMAGES = STORAGE_BASE.child("profile-pics")
     
     var REF_STORAGE_IMAGES:FIRStorageReference {
         return _REF_STORAGE_IMAGES
     }
     
+    var REF_STORAGE_PROFILEIMAGES:FIRStorageReference {
+        return _REF_STORAGE_PROFILEIMAGES
+    }
     
     var REF_DB:FIRDatabaseReference {
         return _REF_DB
@@ -37,7 +41,6 @@ class DataService {
         let user = REF_USERS.child(uid!)
         return user
     }
-    
     
     var REF_USERS:FIRDatabaseReference {
         return _REF_USERS

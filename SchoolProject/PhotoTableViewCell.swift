@@ -32,6 +32,24 @@ class PhotoTableViewCell: UITableViewCell {
         self.numberOfLikesLabel.text = String(post.likes)
         self.profileNameLabel.text = post.userName
         
+//        if image != nil {
+//            self.profileImage.image = image
+//        } else {
+//            let ref = FIRStorage.storage().reference(forURL: post.profileImageUrl)
+//            ref.data(withMaxSize: 2 * 1024 * 1024, completion: {(data, error) in
+//                if error != nil {
+//                    print("FStorage: Unable to download image")
+//                } else {
+//                    print("FStorage: Image downloaded")
+//                    if let imageData = data {
+//                        if let image = UIImage(data: imageData) {
+//                            self.profileImage.image = image
+//                        }
+//                    }
+//                }
+//            })
+//        }
+        
         if image != nil {
             self.uploadImage.image = image
         } else {

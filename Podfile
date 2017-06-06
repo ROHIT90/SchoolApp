@@ -11,6 +11,7 @@ target 'SchoolProject' do
   pod 'FBSDKLoginKit'
   pod 'SCLAlertView'
   pod 'SwiftKeychainWrapper'
+  pod 'SideMenu'
   pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git'
   # Pods for SchoolProject
   def testing_pods

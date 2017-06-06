@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8F0FDAAF1ED74056008A2B18 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0FDAAE1ED74056008A2B18 /* Post.swift */; };
+		8F166F4C1EE6B7D20081401E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F166F4B1EE6B7D20081401E /* SideMenuViewController.swift */; };
+		8F166F4E1EE6BB0F0081401E /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F166F4D1EE6BB0F0081401E /* SideMenuTableViewCell.swift */; };
+		8F166F501EE6C73D0081401E /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F166F4F1EE6C73D0081401E /* ProfilePictureViewController.swift */; };
 		8F6ABEB61ECE781F001C92B9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6ABEB51ECE781F001C92B9 /* DataServices.swift */; };
 		8F7475DD1ECA1B49003152D2 /* FireBaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7475DC1ECA1B49003152D2 /* FireBaseLogin.swift */; };
 		8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF71C1EB6E2EC00321208 /* AppDelegate.swift */; };
@@ -56,6 +59,9 @@
 		2F0BA94F0754B4E5A8033D8D /* Pods_SchoolProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchoolProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D50052F40F1BE891EDA107 /* Pods-SchoolProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchoolProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SchoolProjectUITests/Pods-SchoolProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FDAAE1ED74056008A2B18 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8F166F4B1EE6B7D20081401E /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		8F166F4D1EE6BB0F0081401E /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		8F166F4F1EE6C73D0081401E /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		8F6ABEB51ECE781F001C92B9 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		8F7475DC1ECA1B49003152D2 /* FireBaseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseLogin.swift; sourceTree = "<group>"; };
 		8FEEF7191EB6E2EC00321208 /* SchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +227,7 @@
 				8FEEF75C1EB8CA9C00321208 /* CustomButton.swift */,
 				8FEEF7691EBD2A9C00321208 /* PhotoTableViewCell.swift */,
 				8FEEF76B1EBD2D0E00321208 /* UploadPhotoView.swift */,
+				8F166F4D1EE6BB0F0081401E /* SideMenuTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -232,6 +239,8 @@
 				8FEEF7631EBC287100321208 /* CreateAccountViewController.swift */,
 				8FEEF7651EBC3C4C00321208 /* ResetPasswordViewController.swift */,
 				8FEEF7671EBD294E00321208 /* UploadPhotoViewController.swift */,
+				8F166F4B1EE6B7D20081401E /* SideMenuViewController.swift */,
+				8F166F4F1EE6C73D0081401E /* ProfilePictureViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F6ABEB61ECE781F001C92B9 /* DataServices.swift in Sources */,
+				8F166F501EE6C73D0081401E /* ProfilePictureViewController.swift in Sources */,
 				8FEEF7551EB8C4A400321208 /* Constatnts.swift in Sources */,
 				8FEEF7591EB8C77900321208 /* RoundButton.swift in Sources */,
 				8FEEF76C1EBD2D0E00321208 /* UploadPhotoView.swift in Sources */,
@@ -568,10 +578,12 @@
 				8FEEF7621EBC243C00321208 /* AppState.swift in Sources */,
 				8FEEF7501EB8C35C00321208 /* ShadowView.swift in Sources */,
 				8FEEF75D1EB8CA9C00321208 /* CustomButton.swift in Sources */,
+				8F166F4C1EE6B7D20081401E /* SideMenuViewController.swift in Sources */,
 				8FEEF7641EBC287100321208 /* CreateAccountViewController.swift in Sources */,
 				8F0FDAAF1ED74056008A2B18 /* Post.swift in Sources */,
 				8FEEF76A1EBD2A9C00321208 /* PhotoTableViewCell.swift in Sources */,
 				8FEEF7661EBC3C4C00321208 /* ResetPasswordViewController.swift in Sources */,
+				8F166F4E1EE6BB0F0081401E /* SideMenuTableViewCell.swift in Sources */,
 				8FEEF71F1EB6E2EC00321208 /* SignInVC.swift in Sources */,
 				8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */,
 			);

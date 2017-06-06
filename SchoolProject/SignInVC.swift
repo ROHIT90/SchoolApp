@@ -60,7 +60,7 @@ class SignInVC: UIViewController {
             self.view.isUserInteractionEnabled = true
             if let user = user {
             
-                DataService.ds.createUser(uid: user.uid, userData: ["provider": user.providerID])
+                DataService.ds.createUser(uid: user.uid, userData: ["provider": user.providerID, "profileImage":""])
                 KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
             }
             self.setDisplayName(user!)

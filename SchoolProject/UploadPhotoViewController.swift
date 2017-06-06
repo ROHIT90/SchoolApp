@@ -9,7 +9,6 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var addImageView: UIImageView!
     @IBOutlet weak var captionField: UITextField!
     
-    let photoView = UploadPhotoView()
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
@@ -21,6 +20,12 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
+        
+        let user = FIRAuth.auth()?.currentUser
+        if let user = user {
+            user.photoURL
+            print("this is email id \(user.photoURL)")
+        }
         
         if let displayName = AppState.sharedInstance.displayName {
             KeychainWrapper.standard.set(displayName, forKey: KEY_USERNAME)
@@ -116,6 +121,10 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         KeychainWrapper.standard.removeObject(forKey: KEY_USERNAME)
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    @IBAction func settingsButtonTapped(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
     }
 }
 

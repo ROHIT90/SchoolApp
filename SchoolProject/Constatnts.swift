@@ -22,5 +22,6 @@ struct Constants {
     struct Segues {
         static let SignInToFp = "SignInToFP"
         static let FpToSignIn = "FPToSignIn"
+        static let FpToUploadImage = "uploadImageScene"
     }
 }
