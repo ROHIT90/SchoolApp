@@ -21,12 +21,6 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         
-        let user = FIRAuth.auth()?.currentUser
-        if let user = user {
-            user.photoURL
-            print("this is email id \(user.photoURL)")
-        }
-        
         if let displayName = AppState.sharedInstance.displayName {
             KeychainWrapper.standard.set(displayName, forKey: KEY_USERNAME)
         }

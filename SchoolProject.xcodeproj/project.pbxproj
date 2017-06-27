@@ -644,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -694,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -737,7 +739,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F03557B5FBB2C892C50D506A /* Pods-SchoolProject.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = Y3HQTHU3DE;
 				INFOPLIST_FILE = SchoolProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -753,7 +755,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C21D87D416C59B7C3543A9DE /* Pods-SchoolProject.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = Y3HQTHU3DE;
 				INFOPLIST_FILE = SchoolProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
