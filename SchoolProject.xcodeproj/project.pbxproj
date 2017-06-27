@@ -13,6 +13,7 @@
 		8F166F501EE6C73D0081401E /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F166F4F1EE6C73D0081401E /* ProfilePictureViewController.swift */; };
 		8F6ABEB61ECE781F001C92B9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6ABEB51ECE781F001C92B9 /* DataServices.swift */; };
 		8F7475DD1ECA1B49003152D2 /* FireBaseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7475DC1ECA1B49003152D2 /* FireBaseLogin.swift */; };
+		8FCA86581F02C3770076C3EC /* HowToUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA86571F02C3770076C3EC /* HowToUseViewController.swift */; };
 		8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF71C1EB6E2EC00321208 /* AppDelegate.swift */; };
 		8FEEF71F1EB6E2EC00321208 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEEF71E1EB6E2EC00321208 /* SignInVC.swift */; };
 		8FEEF7221EB6E2EC00321208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FEEF7201EB6E2EC00321208 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		8F166F4F1EE6C73D0081401E /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		8F6ABEB51ECE781F001C92B9 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		8F7475DC1ECA1B49003152D2 /* FireBaseLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseLogin.swift; sourceTree = "<group>"; };
+		8FCA86571F02C3770076C3EC /* HowToUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToUseViewController.swift; sourceTree = "<group>"; };
 		8FEEF7191EB6E2EC00321208 /* SchoolProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEEF71C1EB6E2EC00321208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FEEF71E1EB6E2EC00321208 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				8FEEF7671EBD294E00321208 /* UploadPhotoViewController.swift */,
 				8F166F4B1EE6B7D20081401E /* SideMenuViewController.swift */,
 				8F166F4F1EE6C73D0081401E /* ProfilePictureViewController.swift */,
+				8FCA86571F02C3770076C3EC /* HowToUseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				8F0FDAAF1ED74056008A2B18 /* Post.swift in Sources */,
 				8FEEF76A1EBD2A9C00321208 /* PhotoTableViewCell.swift in Sources */,
 				8FEEF7661EBC3C4C00321208 /* ResetPasswordViewController.swift in Sources */,
+				8FCA86581F02C3770076C3EC /* HowToUseViewController.swift in Sources */,
 				8F166F4E1EE6BB0F0081401E /* SideMenuTableViewCell.swift in Sources */,
 				8FEEF71F1EB6E2EC00321208 /* SignInVC.swift in Sources */,
 				8FEEF71D1EB6E2EC00321208 /* AppDelegate.swift in Sources */,

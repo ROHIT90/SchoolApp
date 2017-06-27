@@ -20,16 +20,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="p0H-xn-sMU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-PW-nEo">
+                                <rect key="frame" x="16" y="275" width="343" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="gSu-WL-gKj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="p0H-xn-sMU" secondAttribute="trailing" id="Gpo-gj-ri8"/>
-                            <constraint firstItem="p0H-xn-sMU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="Pvj-fT-XEk"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="p0H-xn-sMU" secondAttribute="bottom" id="Zbw-nI-xfD"/>
-                            <constraint firstItem="p0H-xn-sMU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nGH-z2-Ysy"/>
+                            <constraint firstAttribute="trailing" secondItem="AFB-PW-nEo" secondAttribute="trailing" constant="16" id="6jC-Qq-2CQ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="AFB-PW-nEo" secondAttribute="bottom" constant="276" id="Qx1-V7-0jE"/>
+                            <constraint firstItem="AFB-PW-nEo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="bys-JD-mIX"/>
+                            <constraint firstItem="AFB-PW-nEo" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="255" id="nvI-L9-bD5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,7 +44,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iTunesArtwork" width="512" height="512"/>
-    </resources>
 </document>
