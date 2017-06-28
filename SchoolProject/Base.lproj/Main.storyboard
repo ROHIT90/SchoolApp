@@ -359,11 +359,15 @@
                                     <action selector="closeButtonTapped:" destination="7xW-ci-dyA" eventType="touchUpInside" id="kX6-vr-xif"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-s8-3Zt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-s8-3Zt">
                                 <rect key="frame" x="16" y="66" width="343" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">First you have to create an account Using your email ID. Once you are logged in you can see image jokes/Funny images uploaded by other users. You can also upload image jokes/funny images.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <mutableString key="text">This entertaining application brings hundreds of good, clean jokes to you! There may be a lot of joke applications available online, but how many of them contain material clean enough to tell your kids, co-workers, friends &amp; family? 
+
+Cohmedy also lets you share these with friends and see their reactions. Choose a joke/meme/ picture and within seconds you can share it. We strive to connect deeply with our audience, and give them entertainment worth sharing with their friends, family, and the people who matter in their lives to make them laugh.
+
+Our entertainment serves a next generation, highly engaged audience that consumes photo- video and content across platforms, on mobile, and has an expectation that humorous content will be relevant and connected to their lives, easily shareable, and globally accessible. Our greatest hits connect with people on a massive scale, and play a significant role in connecting people to each other.</mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -578,7 +582,7 @@
                                             <outletCollection property="gestureRecognizers" destination="XyG-HN-oTN" appends="YES" id="3xd-xa-lLK"/>
                                         </connections>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-E9-c0U">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-E9-c0U">
                                         <rect key="frame" x="58" y="16" width="251" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
