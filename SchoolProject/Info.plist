@@ -47,7 +47,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Camera usage description</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>{human-readable reason for photo access}</string>
+	<string>This lets you upload photos/jokes from photo album.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

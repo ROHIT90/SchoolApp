@@ -166,7 +166,7 @@
                                     <constraint firstItem="K4e-zy-rY9" firstAttribute="leading" secondItem="NIF-sB-hg7" secondAttribute="leading" constant="8" id="YFg-RA-Lyo"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-sQ-S6H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-sQ-S6H">
                                 <rect key="frame" x="166" y="412" width="42" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="Bs1-b0-pPV"/>
@@ -230,8 +230,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwR-qZ-U4B">
-                                        <rect key="frame" x="8" y="20" width="359" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="20" width="359" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -328,8 +328,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn how to use?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUa-Q7-Dih">
-                                        <rect key="frame" x="8" y="20" width="359" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="20" width="359" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -359,7 +359,7 @@
                                     <action selector="closeButtonTapped:" destination="7xW-ci-dyA" eventType="touchUpInside" id="kX6-vr-xif"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-s8-3Zt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="black" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-s8-3Zt">
                                 <rect key="frame" x="16" y="66" width="343" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <mutableString key="text">This entertaining application brings hundreds of good, clean jokes to you! There may be a lot of joke applications available online, but how many of them contain material clean enough to tell your kids, co-workers, friends &amp; family? 
@@ -500,21 +500,12 @@ Our entertainment serves a next generation, highly engaged audience that consume
                                                                 <constraint firstAttribute="height" constant="243" id="sVl-gw-UNH"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-ag-qq7">
-                                                            <rect key="frame" x="263" y="363" width="40" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20.5" id="0Xw-cb-Qrc"/>
-                                                                <constraint firstAttribute="width" constant="39.5" id="Jui-17-fWa"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="doA-1e-Cbl">
                                                             <rect key="frame" x="8" y="317" width="343" height="36"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVW-LA-8RQ">
@@ -524,7 +515,17 @@ Our entertainment serves a next generation, highly engaged audience that consume
                                                                 <constraint firstAttribute="height" constant="20.5" id="3ds-9k-95D"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-ag-qq7">
+                                                            <rect key="frame" x="262" y="363" width="51" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="0Xw-cb-Qrc"/>
+                                                                <constraint firstAttribute="width" constant="51" id="Jui-17-fWa"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="0.2156862745" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -535,7 +536,7 @@ Our entertainment serves a next generation, highly engaged audience that consume
                                                         <constraint firstAttribute="trailing" secondItem="z9B-gl-AUs" secondAttribute="trailing" constant="20" id="DAo-Ub-puW"/>
                                                         <constraint firstItem="2wt-Ws-vTJ" firstAttribute="top" secondItem="z9B-gl-AUs" secondAttribute="bottom" constant="8" id="EoJ-Hx-TOv"/>
                                                         <constraint firstItem="z9B-gl-AUs" firstAttribute="top" secondItem="oH8-lp-FCK" secondAttribute="top" constant="8" id="FKN-Ts-jnX"/>
-                                                        <constraint firstItem="gVW-LA-8RQ" firstAttribute="leading" secondItem="NmK-ag-qq7" secondAttribute="trailing" constant="8" id="LEd-C4-n33"/>
+                                                        <constraint firstItem="gVW-LA-8RQ" firstAttribute="leading" secondItem="NmK-ag-qq7" secondAttribute="trailing" constant="-2" id="LEd-C4-n33"/>
                                                         <constraint firstAttribute="bottom" secondItem="NmK-ag-qq7" secondAttribute="bottom" constant="8" id="Lhn-Pl-kql"/>
                                                         <constraint firstItem="doA-1e-Cbl" firstAttribute="leading" secondItem="oH8-lp-FCK" secondAttribute="leading" constant="8" id="bLB-zT-rAT"/>
                                                         <constraint firstItem="NmK-ag-qq7" firstAttribute="top" secondItem="doA-1e-Cbl" secondAttribute="bottom" constant="10" id="g7X-MM-ACD"/>
@@ -673,11 +674,11 @@ Our entertainment serves a next generation, highly engaged audience that consume
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLl-ih-8tk" customClass="ShadowView" customModule="SchoolProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-wQ-Ert">
-                                        <rect key="frame" x="8" y="20" width="359" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="20" width="359" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -691,7 +692,7 @@ Our entertainment serves a next generation, highly engaged audience that consume
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uU5-pT-3M9">
-                                <rect key="frame" x="16" y="119" width="335" height="170"/>
+                                <rect key="frame" x="16" y="122.5" width="335" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Enter your email id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig3-HD-7rL">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>

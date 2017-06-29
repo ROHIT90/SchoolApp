@@ -2,6 +2,7 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 import NVActivityIndicatorView
+import SCLAlertView
 
 class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -66,11 +67,12 @@ class UploadPhotoViewController: UIViewController,UIImagePickerControllerDelegat
 
         guard let caption = captionField.text, caption != ""  else {
             activityIndicator.stopAnimating()
+            SCLAlertView().showError("", subTitle: "Please add caption")
             return
         }
-        
         guard let image = addImageView.image, imageSelected == true  else {
             activityIndicator.stopAnimating()
+            SCLAlertView().showError("", subTitle: "Please add image")
             return
         }
         
